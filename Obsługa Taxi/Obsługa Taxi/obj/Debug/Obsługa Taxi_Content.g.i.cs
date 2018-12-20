@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/0974c1044c27a604407c3321fbb5.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("bazadanych.mdf")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("bazadanych_log.ldf")]
 
 

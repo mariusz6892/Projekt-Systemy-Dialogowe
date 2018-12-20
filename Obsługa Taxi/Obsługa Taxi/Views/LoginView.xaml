@@ -6,9 +6,60 @@
       xmlns:local="clr-namespace:Obsługa_Taxi.Views"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="LoginView">
+      Title="LoginView" DataContext="{Binding LoginView, Source={StaticResource Locator}}">
 
     <Grid>
-        
+        <Button x:Name="LogIn" HorizontalAlignment="Left" Margin="50,287,0,0" VerticalAlignment="Top" Width="253" Height="57" Background="Green" FontSize="20" Click="LogIn_Click">
+            <TextBlock><Bold><Run Text="Logowanie"/></Bold></TextBlock>
+        </Button>
+        <Button x:Name="Register" HorizontalAlignment="Right" Margin="0,287,50,0" VerticalAlignment="Top" Width="253" Height="57" Background="Red" FontSize="20" Click="Register_Click">
+            <TextBlock><Bold><Run Text="Rejestracja"/></Bold></TextBlock>
+        </Button>
+        <Popup x:Name="PopupLogin" AllowsTransparency="True"  HorizontalAlignment="Center" VerticalAlignment="Center" PopupAnimation="Slide" Placement="Center" Width="300" Height="120">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label FontSize="18" Grid.Row="0" Margin="0,0,0,10" Grid.RowSpan="2">
+                    <TextBlock><Bold><Run Text="Logowanie"/></Bold></TextBlock>
+                </Label>
+                <Label Grid.Row="1">
+                    <TextBlock><Bold><Run Text="Podaj numer telefonu:"/></Bold></TextBlock>
+                </Label>
+                <TextBox x:Name="NumberTextBox" PreviewTextInput="TylkoLiczbyHandler" Height="30" Grid.Row="2" DataObject.Pasting="TextBoxPastingHandler" MaxLength="9" TextChanged="NumberTextBox_TextChanged"></TextBox>
+                <Button x:Name="LogowaniePopup" Grid.Row="3" HorizontalAlignment="Left" Width="100" Height="20" Background="Green" IsEnabled="False" Command="{Binding AdresCommand}">
+                    <TextBlock><Bold><Run Text="Logowanie"/></Bold></TextBlock>
+                </Button>
+                <Button x:Name="ZamknijPopup" Grid.Row="3" HorizontalAlignment="Right" Width="100" Height="20" Background="Red" Click="ZamknijPopupClick">
+                    <TextBlock><Bold><Run Text="Zamknij"/></Bold></TextBlock>
+                </Button>
+            </Grid>
+        </Popup>
+        <Popup x:Name="PopupRegister" AllowsTransparency="True"  HorizontalAlignment="Center" VerticalAlignment="Center" PopupAnimation="Slide" Placement="Center" Width="300" Height="120">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label FontSize="18" Grid.Row="0" Margin="0,0,0,10" Grid.RowSpan="2">
+                    <TextBlock><Bold><Run Text="Rejestracja"/></Bold></TextBlock>
+                </Label>
+                <Label Grid.Row="1">
+                    <TextBlock><Bold><Run Text="Podaj numer telefonu:"/></Bold></TextBlock>
+                </Label>
+                <TextBox x:Name="NumberTextBoxReg" PreviewTextInput="TylkoLiczbyHandler" Height="30" Grid.Row="2" DataObject.Pasting="TextBoxPastingHandler" MaxLength="9" TextChanged="NumberTextBoxReg_TextChanged"></TextBox>
+                <Button x:Name="RegisterPopup" Grid.Row="3" HorizontalAlignment="Left" Width="100" Height="20" Background="Green" IsEnabled="False" Command="{Binding AdresCommand}">
+                    <TextBlock><Bold><Run Text="Rejestracja"/></Bold></TextBlock>
+                </Button>
+                <Button x:Name="ZamknijPopupReg" Grid.Row="3" HorizontalAlignment="Right" Width="100" Height="20" Background="Red" Click="ZamknijPopupClick">
+                    <TextBlock><Bold><Run Text="Zamknij"/></Bold></TextBlock>
+                </Button>
+            </Grid>
+        </Popup>
     </Grid>
 </Page>

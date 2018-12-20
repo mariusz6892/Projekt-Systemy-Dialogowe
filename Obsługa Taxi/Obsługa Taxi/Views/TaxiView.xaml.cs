@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+using Obsługa_Taxi.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,24 @@ namespace Obsługa_Taxi.Views
     /// </summary>
     public partial class TaxiView : Page
     {
+        public TaxiViewModel ViewModel;
+
         public TaxiView()
         {
             InitializeComponent();
+            ViewModel = (TaxiViewModel)this.DataContext;
+        }
+
+        private void LogIn_Click(object sender, RoutedEventArgs e)
+        {
+            if (ListBox.SelectedItem == null)
+            {
+                MessageBox.Show("Nie wybrano kierowcy", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            else
+            {
+                LogIn.Command = ViewModel.PodsumowanieCommand;
+            }
         }
     }
 }

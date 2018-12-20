@@ -1,0 +1,46 @@
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\obj\Debug\Obsługa Taxi.csprojAssemblyReference.cache
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\obj\Debug\MainWindow.g.cs
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\obj\Debug\Views\AdresView.g.cs
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\obj\Debug\Views\LoginView.g.cs
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\obj\Debug\Views\PodsumowanieView.g.cs
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\obj\Debug\Views\ResignView.g.cs
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\obj\Debug\Views\TaxiView.g.cs
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\obj\Debug\Views\ThankYouView.g.cs
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\obj\Debug\App.g.cs
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\obj\Debug\Obsługa Taxi_MarkupCompile.cache
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\obj\Debug\Obsługa Taxi_MarkupCompile.lref
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\bin\Debug\Obsługa Taxi.exe.config
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\bin\Debug\Obsługa Taxi.exe
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\bin\Debug\Obsługa Taxi.pdb
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\bin\Debug\CommonServiceLocator.dll
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\bin\Debug\FirstFloor.ModernUI.dll
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\bin\Debug\FirstFloor.ModernUI.xml
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\obj\Debug\MainWindow.baml
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\obj\Debug\Views\AdresView.baml
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\obj\Debug\Views\LoginView.baml
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\obj\Debug\Views\PodsumowanieView.baml
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\obj\Debug\Views\ResignView.baml
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\obj\Debug\Views\TaxiView.baml
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\obj\Debug\Views\ThankYouView.baml
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\obj\Debug\Obsługa Taxi.g.resources
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\obj\Debug\Obsługa_Taxi.Properties.Resources.resources
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\obj\Debug\Obsługa Taxi.csproj.GenerateResource.cache
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\obj\Debug\Obsługa Taxi.csproj.CoreCompileInputs.cache
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\obj\Debug\Obsługa Taxi.csproj.CopyComplete
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\obj\Debug\Obsługa Taxi.exe
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\obj\Debug\Obsługa Taxi.pdb
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\obj\Debug\App.baml
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\bin\Debug\BazaDanych.mdf
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\bin\Debug\BazaDanych_log.ldf
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\obj\Debug\Obsługa Taxi_Content.g.cs
