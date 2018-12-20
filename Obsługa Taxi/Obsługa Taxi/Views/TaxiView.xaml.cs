@@ -30,7 +30,7 @@ namespace Obsługa_Taxi.Views
             ViewModel = (TaxiViewModel)this.DataContext;
         }
 
-        private void LogIn_Click(object sender, RoutedEventArgs e)
+        private void Zamow_Click(object sender, RoutedEventArgs e)
         {
             if (ListBox.SelectedItem == null)
             {
@@ -38,7 +38,7 @@ namespace Obsługa_Taxi.Views
             }
             else
             {
-                LogIn.Command = ViewModel.PodsumowanieCommand;
+                Zamow.Command = ViewModel.PodsumowanieCommand;
             }
         }
     }

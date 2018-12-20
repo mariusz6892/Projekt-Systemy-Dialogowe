@@ -29,10 +29,11 @@
                 <Label Grid.Row="1">
                     <TextBlock><Bold><Run Text="Podaj numer telefonu:"/></Bold></TextBlock>
                 </Label>
-                <TextBox x:Name="NumberTextBox" PreviewTextInput="TylkoLiczbyHandler" Height="30" Grid.Row="2" DataObject.Pasting="TextBoxPastingHandler" MaxLength="9" TextChanged="NumberTextBox_TextChanged"></TextBox>
-                <Button x:Name="LogowaniePopup" Grid.Row="3" HorizontalAlignment="Left" Width="100" Height="20" Background="Green" IsEnabled="False" Command="{Binding AdresCommand}">
+                <Button x:Name="LogowaniePopup" Grid.Row="3" HorizontalAlignment="Left" Width="100" Height="20" Background="Green" IsEnabled="False" Command="{Binding AdresCommand}" Click="LogowaniePopup_Click" Margin="10,5,0,5">
                     <TextBlock><Bold><Run Text="Logowanie"/></Bold></TextBlock>
                 </Button>
+                <TextBox x:Name="NumberTextBox" PreviewTextInput="TylkoLiczbyHandler" Height="30" Grid.Row="2" DataObject.Pasting="TextBoxPastingHandler" MaxLength="9" TextChanged="NumberTextBox_TextChanged" Text="{Binding nrtelefonu,Mode=OneWayToSource}"></TextBox>
+                
                 <Button x:Name="ZamknijPopup" Grid.Row="3" HorizontalAlignment="Right" Width="100" Height="20" Background="Red" Click="ZamknijPopupClick">
                     <TextBlock><Bold><Run Text="Zamknij"/></Bold></TextBlock>
                 </Button>
@@ -52,10 +53,11 @@
                 <Label Grid.Row="1">
                     <TextBlock><Bold><Run Text="Podaj numer telefonu:"/></Bold></TextBlock>
                 </Label>
-                <TextBox x:Name="NumberTextBoxReg" PreviewTextInput="TylkoLiczbyHandler" Height="30" Grid.Row="2" DataObject.Pasting="TextBoxPastingHandler" MaxLength="9" TextChanged="NumberTextBoxReg_TextChanged"></TextBox>
-                <Button x:Name="RegisterPopup" Grid.Row="3" HorizontalAlignment="Left" Width="100" Height="20" Background="Green" IsEnabled="False" Command="{Binding AdresCommand}">
+                <Button x:Name="RegisterPopup" Grid.Row="3" HorizontalAlignment="Left" Width="100" Height="20" Background="Green" IsEnabled="False" Command="{Binding RegisterCommand}" Click="RegisterPopup_Click">
                     <TextBlock><Bold><Run Text="Rejestracja"/></Bold></TextBlock>
                 </Button>
+                <TextBox x:Name="NumberTextBoxReg" PreviewTextInput="TylkoLiczbyHandler" Height="30" Grid.Row="2" DataObject.Pasting="TextBoxPastingHandler" MaxLength="9" TextChanged="NumberTextBoxReg_TextChanged" Text="{Binding nrtelefonu, Mode=OneWayToSource}"></TextBox>
+               
                 <Button x:Name="ZamknijPopupReg" Grid.Row="3" HorizontalAlignment="Right" Width="100" Height="20" Background="Red" Click="ZamknijPopupClick">
                     <TextBlock><Bold><Run Text="Zamknij"/></Bold></TextBlock>
                 </Button>

@@ -70,20 +70,28 @@ namespace Obsługa_Taxi.Views
 
         private void NumberTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (NumberTextBox.Text.Length != NumberTextBox.MaxLength)
-            {
-                LogowaniePopup.IsEnabled = false;
-            }
-            else LogowaniePopup.IsEnabled = true;
+            LogowaniePopup.IsEnabled = NumberTextBox.Text.Length == NumberTextBox.MaxLength ? true : false;
         }
 
         private void NumberTextBoxReg_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (NumberTextBoxReg.Text.Length != NumberTextBoxReg.MaxLength)
-            {
-                RegisterPopup.IsEnabled = false;
-            }
-            else RegisterPopup.IsEnabled = true;
+            RegisterPopup.IsEnabled = NumberTextBoxReg.Text.Length == NumberTextBoxReg.MaxLength ? true : false;
+        }
+
+        private void LogowaniePopup_Click(object sender, RoutedEventArgs e)
+        {
+            PopupLogin.IsOpen = false;
+            PopupRegister.IsOpen = false;
+            NumberTextBox.Text = "";
+            NumberTextBoxReg.Text = "";
+        }
+
+        private void RegisterPopup_Click(object sender, RoutedEventArgs e)
+        {
+            PopupLogin.IsOpen = false;
+            PopupRegister.IsOpen = false;
+            NumberTextBox.Text = "";
+            NumberTextBoxReg.Text = "";
         }
     }
 }
