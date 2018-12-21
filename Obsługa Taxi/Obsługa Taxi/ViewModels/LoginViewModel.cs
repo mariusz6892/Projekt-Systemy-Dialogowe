@@ -17,8 +17,6 @@ namespace Obsługa_Taxi.ViewModels
         private IFrameNavigationService _navigationService;
         SqlConnection con;
         SqlCommand cmd;
-        SqlDataAdapter adapter;
-        DataSet ds;
 
         private string _nrtelefonu;
         public string nrtelefonu
@@ -36,11 +34,27 @@ namespace Obsługa_Taxi.ViewModels
                     ?? (_AdresCommand = new RelayCommand(
                     () =>
                     {
-
-                        _navigationService.NavigateTo("AdresView");
-                    }));
+                            if (CzyZarejestrowany())
+                            {
+                                if (CzyZalogowany())
+                                {
+                                MessageBox.Show("Użytkownik jest już zalogowany!", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+                            }
+                                else
+                                {
+                                    Zaloguj();
+                                    _navigationService.NavigateTo("AdresView",nrtelefonu);
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Użytkownik nie zarejestrowany!", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+                            }
+                       
+                     }));
             }
         }
+
 
         private RelayCommand _RegisterCommand;
         public RelayCommand RegisterCommand
@@ -51,26 +65,18 @@ namespace Obsługa_Taxi.ViewModels
                     ?? (_RegisterCommand = new RelayCommand(
                         () =>
                     {
-                        cmd = new SqlCommand("INSERT INTO Klienci " + "(Telefon, CzyZalogowany) " + 
-                            "VALUES(" + "'" + nrtelefonu + "', @CzyZalogowany)", con);
 
-                       // cmd.Parameters.AddWithValue("@Telefon", nrtelefonu);
-                       cmd.Parameters.AddWithValue("@CzyZalogowany", true);
-
-                        try
+                        if (CzyZarejestrowany())
                         {
-                            con.Open();
-                            cmd.ExecuteNonQuery();
+                            MessageBox.Show("Użytkownik jest już zarejestrowany!", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
                         }
-                        catch (SqlException ex)
+                        else
                         {
-                            MessageBox.Show(ex.ToString(), "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+                            Zarejestruj();
+                            _navigationService.NavigateTo("AdresView",nrtelefonu);
                         }
-                        finally
-                        {
-                            con.Close();
-                        }
-                        _navigationService.NavigateTo("AdresView");
+                        
+                        
                     }));
             }
         }
@@ -81,43 +87,105 @@ namespace Obsługa_Taxi.ViewModels
         {
             try
             {
-                con = new SqlConnection(Settings.Default.BazaDanychConnectionString);
+                _navigationService = navigationService;
             }
             catch(Exception)
             {
 
             }
-            _navigationService = navigationService;
-        }
-         
-
-        public void Zaloguj(string nrtelefonu)
-        {
-            cmd = new SqlCommand("Select * from TAKSOWKARZE", con);
-            adapter = new SqlDataAdapter(cmd);
-            ds = new DataSet();
-            adapter.Fill(ds, "TAKSOWKARZE");
+            
         }
 
-        
 
-        public bool CzyZalogowany(string nrtelefonu)
+
+        private void Zaloguj()
         {
-            /*cmd = new SqlCommand("Select CzyZalogowany from Klient where Telefon =" + nrtelefonu, con);
-            adapter = new SqlDataAdapter(cmd);
-            ds = new DataSet();
-            adapter.Fill(ds, "Klient");*/
-            return true;
+            try
+            {
+                con = new SqlConnection(Settings.Default.BazaDanychConnectionString);
+                con.Open();
+                cmd = new SqlCommand("UPDATE Klienci SET CzyZalogowany=@CzyZalogowany WHERE Telefon =" + nrtelefonu, con);
+                cmd.Parameters.AddWithValue("@CzyZalogowany", true);
+                cmd.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.ToString(), "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public bool CzyZalogowany()
+        {
+            try
+            {
+                con = new SqlConnection(Settings.Default.BazaDanychConnectionString);
+                con.Open();
+                cmd = new SqlCommand("Select CzyZalogowany from Klienci where Telefon =" + nrtelefonu, con);
+                var dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    return (bool)dr["CzyZalogowany"];
+                }
+                else return false;
+            }
+            catch(Exception Ex)
+            {
+                MessageBox.Show(Ex.ToString(), "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+                return false;
+            }
+            finally
+            {
+                con.Close();
+            }
         }
 
         public void Zarejestruj()
         {
-
+            try
+            {
+                con = new SqlConnection(Settings.Default.BazaDanychConnectionString);
+                con.Open();
+                cmd = new SqlCommand("INSERT INTO Klienci " + "(Telefon, CzyZalogowany) " +
+                "VALUES(" + "'" + nrtelefonu + "', @CzyZalogowany)", con);
+                cmd.Parameters.AddWithValue("@CzyZalogowany", true);
+                cmd.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.ToString(), "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            finally
+            {
+                con.Close();
+            }
         }
 
         public bool CzyZarejestrowany()
         {
-            return true;
+            try
+            {
+                con = new SqlConnection(Settings.Default.BazaDanychConnectionString);
+                con.Open();
+                cmd = new SqlCommand("Select * from Klienci where Telefon =" + "'" +  nrtelefonu + "'", con);
+                var dr = cmd.ExecuteReader();
+                return dr.Read() ? true : false;
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+                return false;
+            }
+            finally
+            {
+                con.Close();
+            }
+            
+            
         }
     }
 }

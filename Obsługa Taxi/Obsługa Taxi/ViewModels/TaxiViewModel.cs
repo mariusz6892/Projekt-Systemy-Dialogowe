@@ -71,7 +71,7 @@ namespace Obsługa_Taxi.ViewModels
 
                 foreach (DataRow dr in ds.Tables[0].Rows)
                 {
-                    if (!(Convert.ToBoolean(dr[1].ToString())))
+                    if (!(Convert.ToBoolean(dr[1].ToString())))//czyzajety
                     {
                         Taxis.Add(new Taxi
                         {
