@@ -39,12 +39,11 @@ namespace Obsługa_Taxi.ViewModels
                                 if (CzyZalogowany())
                                 {
                                 MessageBox.Show("Użytkownik jest już zalogowany!", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
-                            }
+                                }
                                 else
                                 {
-                                    Zaloguj();
-                                    _navigationService.NavigateTo("AdresView",nrtelefonu);
-                                }
+                                    if (Zaloguj()) _navigationService.NavigateTo("AdresView", KlientID());
+                            }
                             }
                             else
                             {
@@ -55,6 +54,7 @@ namespace Obsługa_Taxi.ViewModels
             }
         }
 
+        
 
         private RelayCommand _RegisterCommand;
         public RelayCommand RegisterCommand
@@ -72,8 +72,7 @@ namespace Obsługa_Taxi.ViewModels
                         }
                         else
                         {
-                            Zarejestruj();
-                            _navigationService.NavigateTo("AdresView",nrtelefonu);
+                            if (Zarejestruj()) _navigationService.NavigateTo("AdresView", KlientID());
                         }
                         
                         
@@ -96,9 +95,32 @@ namespace Obsługa_Taxi.ViewModels
             
         }
 
+        private int KlientID()
+        {
+            try
+            {
+                con = new SqlConnection(Settings.Default.BazaDanychConnectionString);
+                con.Open();
+                cmd = new SqlCommand("Select KlientID from Klienci where Telefon =" + nrtelefonu, con);
+                var dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    return (int)dr["KlientID"];
+                }
+                else return 0;
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.ToString(), "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+                return 0;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
 
-
-        private void Zaloguj()
+        private bool Zaloguj()
         {
             try
             {
@@ -107,10 +129,12 @@ namespace Obsługa_Taxi.ViewModels
                 cmd = new SqlCommand("UPDATE Klienci SET CzyZalogowany=@CzyZalogowany WHERE Telefon =" + nrtelefonu, con);
                 cmd.Parameters.AddWithValue("@CzyZalogowany", true);
                 cmd.ExecuteNonQuery();
+                return true;
             }
             catch (SqlException ex)
             {
                 MessageBox.Show(ex.ToString(), "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+                return false;
             }
             finally
             {
@@ -143,7 +167,7 @@ namespace Obsługa_Taxi.ViewModels
             }
         }
 
-        public void Zarejestruj()
+        public bool Zarejestruj()
         {
             try
             {
@@ -153,10 +177,12 @@ namespace Obsługa_Taxi.ViewModels
                 "VALUES(" + "'" + nrtelefonu + "', @CzyZalogowany)", con);
                 cmd.Parameters.AddWithValue("@CzyZalogowany", true);
                 cmd.ExecuteNonQuery();
+                return true;
             }
             catch (SqlException ex)
             {
                 MessageBox.Show(ex.ToString(), "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+                return false;
             }
             finally
             {

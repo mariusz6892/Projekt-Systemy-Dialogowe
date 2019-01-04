@@ -4,13 +4,39 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Obsługa_Taxi.Views"
+      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+      xmlns:command="http://www.galasoft.ch/mvvmlight"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="PodsumowanieView">
     <Page.DataContext>
         <Binding Path="PodsumowanieView" Source="{StaticResource Locator}"/>
     </Page.DataContext>
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <command:EventToCommand Command="{Binding LoadedCommand, Mode=OneWay}" />
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
     <Grid Margin="0,170,0,0">
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="1" Margin="5" TextBlock.FontWeight="Bold">
+            <StackPanel Orientation="Horizontal" TextBlock.FontWeight="Bold" >
+                <TextBlock Text="Wybrałeś taksówkarza: "/>
+                <TextBlock Text="{Binding imietaxi}" />
+                <TextBlock Text="{Binding nazwiskotaxi}" Padding="3,0,0,0"/>
+            </StackPanel>
+            <TextBlock Text="Wybrany adres:" />
+            <TextBlock Text="{Binding adresdo}" />
+            <TextBlock Text="Twój numer telefonu:" />
+            <TextBlock Text="{Binding nrtelefonu}" />
+        </StackPanel>
+        <Button x:Name="Zamow" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="253" Height="57" Background="Green" FontSize="20" Margin="35,0,0,37" Command="{Binding ConfirmCommand}">
+            <TextBlock><Bold><Run Text="Potwierdź"/></Bold></TextBlock>
+        </Button>
+        <Button x:Name="Wstecz" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="253" Height="57" Background="Red" FontSize="20" Command="{Binding ResignCommand}" Margin="0,0,35,37">
+            <TextBlock><Bold><Run Text="Zrezygnuj"/></Bold></TextBlock>
+        </Button>
     </Grid>
 </Page>

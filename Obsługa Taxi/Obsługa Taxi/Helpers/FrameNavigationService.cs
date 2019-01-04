@@ -50,7 +50,7 @@ namespace Obsługa_Taxi
         {
             if (_historic.Count > 1)
             {
-                String back = "Back";
+                string back = "Back";
                 _historic.RemoveAt(_historic.Count - 1);
                 NavigateTo(_historic.Last(), back);
             }
@@ -75,7 +75,7 @@ namespace Obsługa_Taxi
                 {
                     frame.Source = _pagesByKey[pageKey];
                 }
-                if ((String)parameter == V)
+                if (parameter == V)
                 {
                     CurrentPageKey = pageKey;
                 }

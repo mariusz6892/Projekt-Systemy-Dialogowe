@@ -4,14 +4,20 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Obsługa_Taxi.Views"
-      xmlns:Obsługa_Taxi="clr-namespace:Obsługa_Taxi" x:Class="Obsługa_Taxi.Views.TaxiView"
+      xmlns:Obsługa_Taxi="clr-namespace:Obsługa_Taxi"
+    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+    xmlns:command="http://www.galasoft.ch/mvvmlight" x:Class="Obsługa_Taxi.Views.TaxiView"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="TaxiView">
     <Page.DataContext>
         <Binding Path="TaxiView" Source="{StaticResource Locator}"/>
     </Page.DataContext>
-
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <command:EventToCommand Command="{Binding LoadedCommand, Mode=OneWay}" />
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
     <Grid Margin="80,135,80,10">
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
@@ -24,7 +30,7 @@
         <Label Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="134">
             <TextBlock><Bold><Run Text="Wybierz taksówkarza:"/></Bold></TextBlock>
         </Label>
-        <ListBox x:Name="ListBox" Grid.Row="1" Margin="10,10,10,10" ItemsSource="{Binding Taxis}">
+        <ListBox x:Name="ListBox" Grid.Row="1" Margin="10,10,10,10" ItemsSource="{Binding Taxis}" SelectedItem="{Binding taksowkarz}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>

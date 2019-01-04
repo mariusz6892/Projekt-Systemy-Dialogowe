@@ -4,11 +4,25 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Obsługa_Taxi.Views"
+      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+      xmlns:command="http://www.galasoft.ch/mvvmlight"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ThankYouView">
-
+    <Page.DataContext>
+        <Binding Path="ThankYouView" Source="{StaticResource Locator}"/>
+    </Page.DataContext>
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <command:EventToCommand Command="{Binding LoadedCommand, Mode=OneWay}" />
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
     <Grid>
-        
+        <Label FontSize="18" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Height="34">
+            <TextBlock><Bold><Run Text="Dziękujemy za skorzystanie z naszych usług!"/></Bold></TextBlock>
+        </Label>
+        <Button x:Name="Register" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="253" Height="57" Background="Red" FontSize="20" Command="{Binding GoBackCommand}" Margin="265,0,282,102">
+            <TextBlock><Bold><Run Text="Wyloguj"/></Bold></TextBlock>
+        </Button>
     </Grid>
 </Page>

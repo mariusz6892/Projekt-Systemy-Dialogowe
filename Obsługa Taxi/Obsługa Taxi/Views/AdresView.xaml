@@ -4,10 +4,17 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Obsługa_Taxi.Views"
+      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+      xmlns:command="http://www.galasoft.ch/mvvmlight"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="AdresView" DataContext="{Binding AdresView, Source={StaticResource Locator}}">
 
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <command:EventToCommand Command="{Binding LoadedCommand, Mode=OneWay}" />
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
     <Grid Margin="80,185,80,10">
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
@@ -21,7 +28,7 @@
         <Label Grid.Row="1" HorizontalAlignment="Center">
             <TextBlock><Bold><Run Text="Podaj adres docelowy:"/></Bold></TextBlock>
         </Label>
-        <TextBox Grid.Row="1" Margin="210,20,210,10" Height="30">
+        <TextBox Grid.Row="1" Margin="210,20,210,10" Height="30" Text="{Binding adresdo,Mode=OneWayToSource}">
         </TextBox>
         <Button x:Name="LogIn" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="253" Height="57" Background="Green" FontSize="20" Command="{Binding TaxiCommand}" Margin="25,0,0,0">
             <TextBlock><Bold><Run Text="Dalej"/></Bold></TextBlock>
