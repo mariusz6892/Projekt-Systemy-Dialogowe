@@ -1,12 +1,19 @@
 ﻿using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
+using Microsoft.Speech.Recognition;
+using Microsoft.Speech.Recognition.SrgsGrammar;
+using Microsoft.Speech.Synthesis;
+using Obsługa_Taxi.Helpers;
 using Obsługa_Taxi.Properties;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 
@@ -24,6 +31,20 @@ namespace Obsługa_Taxi.ViewModels
             get { return _nrtelefonu; }
             set { Set(ref _nrtelefonu, value); }
         }
+
+        private RelayCommand _loadedCommand;
+        public RelayCommand LoadedCommand
+        {
+            get
+            {
+                return _loadedCommand
+                    ?? (_loadedCommand = new RelayCommand(
+                    () =>
+                    {
+                    }));
+            }
+        }
+
 
         private RelayCommand _AdresCommand;
         public RelayCommand AdresCommand
@@ -87,6 +108,7 @@ namespace Obsługa_Taxi.ViewModels
             try
             {
                 _navigationService = navigationService;
+                
             }
             catch(Exception)
             {

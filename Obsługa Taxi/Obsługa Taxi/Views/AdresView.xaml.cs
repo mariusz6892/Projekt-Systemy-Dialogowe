@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Obsługa_Taxi.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,7 +19,7 @@ namespace Obsługa_Taxi.Views
     /// <summary>
     /// Interaction logic for AdresView.xaml
     /// </summary>
-    public partial class AdresView : Page
+    public partial class AdresView : SpeechPage
     {
         public AdresView()
         {

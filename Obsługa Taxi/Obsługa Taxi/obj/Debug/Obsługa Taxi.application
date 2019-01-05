@@ -7,14 +7,14 @@
     <framework targetVersion="4.6.1" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Obsługa Taxi.exe.manifest" size="8534">
+    <dependentAssembly dependencyType="install" codebase="Obsługa Taxi.exe.manifest" size="9220">
       <assemblyIdentity name="Obsługa Taxi.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Oj5+MRNr2lhC4lwY+fpDCgF5eHWMjn2T7ovo74cuv3c=</dsig:DigestValue>
+        <dsig:DigestValue>Ea956DXuK+muZKVZ+Vf1vEkCdxrBta1Ef4RUb4ZYMyU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -1,4 +1,5 @@
 ﻿
+using Obsługa_Taxi.Helpers;
 using Obsługa_Taxi.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -20,7 +21,7 @@ namespace Obsługa_Taxi.Views
     /// <summary>
     /// Interaction logic for TaxiView.xaml
     /// </summary>
-    public partial class TaxiView : Page
+    public partial class TaxiView : SpeechPage
     {
         public TaxiViewModel ViewModel;
 

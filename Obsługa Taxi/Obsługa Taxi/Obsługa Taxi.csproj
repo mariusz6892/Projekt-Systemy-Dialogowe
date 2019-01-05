@@ -79,6 +79,10 @@
     <Reference Include="GalaSoft.MvvmLight.Platform, Version=5.4.1.0, Culture=neutral, PublicKeyToken=5f873c45e98af8a1, processorArchitecture=MSIL">
       <HintPath>..\packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.Platform.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Speech, Version=11.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files\Microsoft SDKs\Speech\v11.0\Assembly\Microsoft.Speech.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -109,6 +113,9 @@
     </Compile>
     <Compile Include="Helpers\FrameNavigationService.cs" />
     <Compile Include="Helpers\IFrameNavigationService.cs" />
+    <Compile Include="Helpers\ISpeechRecognize.cs" />
+    <Compile Include="Helpers\ISpeechSynthesis.cs" />
+    <Compile Include="Helpers\SpeechPage.cs" />
     <Compile Include="Models\Taxi.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="ViewModels\AdresViewModel.cs" />
@@ -192,6 +199,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Assets\AdresView.srgs" />
+    <None Include="Assets\LoginView.srgs" />
+    <None Include="Assets\PodsumowanieView.srgs" />
+    <None Include="Assets\ResignView.srgs" />
+    <None Include="Assets\TaxiView.srgs" />
+    <None Include="Assets\ThankYouView.srgs" />
     <None Include="BazaDanychDataSet.xsc">
       <DependentUpon>BazaDanychDataSet.xsd</DependentUpon>
     </None>

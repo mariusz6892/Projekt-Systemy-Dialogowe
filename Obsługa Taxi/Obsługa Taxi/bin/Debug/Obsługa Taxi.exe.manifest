@@ -102,14 +102,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Obsługa Taxi.exe" size="451048">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.Speech.dll" size="686888">
+      <assemblyIdentity name="Microsoft.Speech" version="11.0.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>g8rCEPQgU8xioPerN/ESJ2F+VhXeGngGIEdrQuMl7ew=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Obsługa Taxi.exe" size="459752">
       <assemblyIdentity name="Obsługa Taxi" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>yvLmpM9S4NH2vG/ovRwmfUpO2uHf5ILY5eKffZvJJbU=</dsig:DigestValue>
+        <dsig:DigestValue>Y9V3aU+nvxb2/4XR/qWOEnL2RDYyudtcGRA1BqNWLLc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

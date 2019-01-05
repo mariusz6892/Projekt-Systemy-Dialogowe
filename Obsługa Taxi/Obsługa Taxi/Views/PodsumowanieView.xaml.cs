@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Obsługa_Taxi.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,7 +19,7 @@ namespace Obsługa_Taxi.Views
     /// <summary>
     /// Interaction logic for PodsumowanieView.xaml
     /// </summary>
-    public partial class PodsumowanieView : Page
+    public partial class PodsumowanieView : SpeechPage
     {
         public PodsumowanieView()
         {

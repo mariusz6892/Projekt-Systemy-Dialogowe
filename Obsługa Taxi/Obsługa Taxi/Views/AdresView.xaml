@@ -1,4 +1,5 @@
-﻿<Page x:Class="Obsługa_Taxi.Views.AdresView"
+﻿<local1:SpeechPage
+    xmlns:local1="clr-namespace:Obsługa_Taxi.Helpers" x:Class="Obsługa_Taxi.Views.AdresView"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -37,4 +38,4 @@
             <TextBlock><Bold><Run Text="Wyloguj"/></Bold></TextBlock>
         </Button>
     </Grid>
-</Page>
+</local1:SpeechPage>

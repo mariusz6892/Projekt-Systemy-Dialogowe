@@ -48,3 +48,4 @@ C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowyc
 C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\obj\Debug\Obsługa Taxi.csproj.CopyComplete
 C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\obj\Debug\Obsługa Taxi.exe
 C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\obj\Debug\Obsługa Taxi.pdb
+C:\Users\MarWin\Desktop\SEMESTR 9\Standardy w projektowaniu systemów dialogowych\Projekt-Systemy-Dialogowe\Obsługa Taxi\Obsługa Taxi\bin\Debug\Microsoft.Speech.dll
