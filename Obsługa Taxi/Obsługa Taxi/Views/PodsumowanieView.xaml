@@ -33,10 +33,10 @@
             <TextBlock Text="Twój numer telefonu:" />
             <TextBlock Text="{Binding nrtelefonu}" />
         </StackPanel>
-        <Button x:Name="Zamow" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="253" Height="57" Background="Green" FontSize="20" Margin="35,0,0,37" Command="{Binding ConfirmCommand}">
+        <Button x:Name="Zamow" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="253" Height="57" Background="Green" FontSize="20" Margin="35,0,0,37" Command="{Binding ConfirmCommand}" Click="Zamow_Click">
             <TextBlock><Bold><Run Text="Potwierdź"/></Bold></TextBlock>
         </Button>
-        <Button x:Name="Wstecz" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="253" Height="57" Background="Red" FontSize="20" Command="{Binding ResignCommand}" Margin="0,0,35,37">
+        <Button x:Name="Wstecz" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="253" Height="57" Background="Red" FontSize="20" Command="{Binding ResignCommand}" Margin="0,0,35,37" Click="Wstecz_Click">
             <TextBlock><Bold><Run Text="Zrezygnuj"/></Bold></TextBlock>
         </Button>
     </Grid>

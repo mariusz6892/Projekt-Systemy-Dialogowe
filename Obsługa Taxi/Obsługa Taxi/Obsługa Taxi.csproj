@@ -199,12 +199,26 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Assets\AdresView.srgs" />
-    <None Include="Assets\LoginView.srgs" />
-    <None Include="Assets\PodsumowanieView.srgs" />
-    <None Include="Assets\ResignView.srgs" />
-    <None Include="Assets\TaxiView.srgs" />
-    <None Include="Assets\ThankYouView.srgs" />
+    <None Include="Assets\AdresView.srgs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\LoginView.srgs">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\PodsumowanieView.srgs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Assets\ResignView.srgs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\TaxiView.srgs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ThankYouView.srgs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="BazaDanychDataSet.xsc">
       <DependentUpon>BazaDanychDataSet.xsd</DependentUpon>
     </None>
@@ -227,10 +241,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Assets\logo.png" />
+    <Resource Include="Assets\logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Assets\logo2.png" />
+    <Resource Include="Assets\logo2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="BazaDanych.mdf">

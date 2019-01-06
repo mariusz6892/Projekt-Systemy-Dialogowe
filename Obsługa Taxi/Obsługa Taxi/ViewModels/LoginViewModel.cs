@@ -32,19 +32,6 @@ namespace Obsługa_Taxi.ViewModels
             set { Set(ref _nrtelefonu, value); }
         }
 
-        private RelayCommand _loadedCommand;
-        public RelayCommand LoadedCommand
-        {
-            get
-            {
-                return _loadedCommand
-                    ?? (_loadedCommand = new RelayCommand(
-                    () =>
-                    {
-                    }));
-            }
-        }
-
 
         private RelayCommand _AdresCommand;
         public RelayCommand AdresCommand
@@ -63,7 +50,12 @@ namespace Obsługa_Taxi.ViewModels
                                 }
                                 else
                                 {
-                                    if (Zaloguj()) _navigationService.NavigateTo("AdresView", KlientID());
+                                if (Zaloguj())
+                                {
+                                    
+                                    _navigationService.NavigateTo("AdresView", KlientID());
+                                }
+
                             }
                             }
                             else

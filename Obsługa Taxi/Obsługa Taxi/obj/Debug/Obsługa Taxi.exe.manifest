@@ -114,14 +114,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Obsługa Taxi.exe" size="459752">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Obsługa Taxi.exe" size="464360">
       <assemblyIdentity name="Obsługa Taxi" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Y9V3aU+nvxb2/4XR/qWOEnL2RDYyudtcGRA1BqNWLLc=</dsig:DigestValue>
+        <dsig:DigestValue>nT0chq0MQQ7osPnrusW7anWu2JcrsrhULmfh3f3uycs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -143,7 +143,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>Ck+YI3uJNfjECv8CQFGJTv3vy5n2mV9c4piWRbyEJco=</dsig:DigestValue>
+      <dsig:DigestValue>h6hIeGwsz0HPxppX3Mmgzlo/7NBmmY7DpQSD4JizZO0=</dsig:DigestValue>
     </hash>
   </file>
   <file name="BazaDanych_log.ldf" size="8388608" writeableType="applicationData">
@@ -152,7 +152,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>pau8m2vDa4/SWgggNbZ1NjBAU7PTVNRM2J88lmpWVeI=</dsig:DigestValue>
+      <dsig:DigestValue>aAQ8kOEbpp9VskG7gbOQNEACSNvZmk852DA13Qh2QU8=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Obsługa Taxi.exe.config" size="918">

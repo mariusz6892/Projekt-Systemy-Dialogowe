@@ -22,7 +22,7 @@
         <Label FontSize="18" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Height="34">
             <TextBlock><Bold><Run Text="Dziękujemy za skorzystanie z naszych usług!"/></Bold></TextBlock>
         </Label>
-        <Button x:Name="Register" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="253" Height="57" Background="Red" FontSize="20" Command="{Binding GoBackCommand}" Margin="265,0,282,102">
+        <Button x:Name="Register" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="253" Height="57" Background="Red" FontSize="20" Command="{Binding GoBackCommand}" Margin="265,0,282,102" Click="Register_Click">
             <TextBlock><Bold><Run Text="Wyloguj"/></Bold></TextBlock>
         </Button>
     </Grid>

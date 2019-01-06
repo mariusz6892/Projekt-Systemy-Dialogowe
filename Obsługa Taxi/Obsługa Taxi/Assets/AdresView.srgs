@@ -11,15 +11,7 @@
         <tag>login</tag>
       </item>
       <item>
-        <ruleref uri="#register" />
-        <tag>register</tag>
-      </item>
-      <item>
-        <ruleref uri="'#telephone" />
-        <tag>telephone</tag>
-      </item>
-      <item>
-        <ruleref uri="'#quit" />
+        <ruleref uri="#quit" />
         <tag>quit</tag>
       </item>
     </one-of>
@@ -29,79 +21,15 @@
     <item>Pomoc</item>
   </rule>
 
-  <rule id="register">
-    <item>Rejestracja</item>
-    <item>Rejestruj</item>
-    <item>Zarejestruj</item>
-  </rule>
-
   <rule id="login">
     <one-of>
-      <item>Logowanie</item>
-      <item>Loguj</item>
-      <item>Zaloguj</item>
+      <item>Dalej</item>
     </one-of>
   </rule>
 
-  <rule id="telephone">
-    <one-of>
-      <item>
-        <ruleref uri="'#number" />
-        <tag>number</tag>
-      </item>
-      <item>
-        <ruleref uri="'#number" />
-        <tag>number</tag>
-      </item>
-      <item>
-        <ruleref uri="'#number" />
-        <tag>number</tag>
-      </item>
-      <item>
-        <ruleref uri="'#number" />
-        <tag>number</tag>
-      </item>
-      <item>
-        <ruleref uri="'#number" />
-        <tag>number</tag>
-      </item>
-      <item>
-        <ruleref uri="'#number" />
-        <tag>number</tag>
-      </item>
-      <item>
-        <ruleref uri="'#number" />
-        <tag>number</tag>
-      </item>
-      <item>
-        <ruleref uri="'#number" />
-        <tag>number</tag>
-      </item>
-      <item>
-        <ruleref uri="'#number" />
-        <tag>number</tag>
-      </item>
-    </one-of>
-  </rule>
-
-  <rule id="number">
-    <one-of>
-      <item>zero</item>
-      <item>jeden</item>
-      <item>dwa</item>
-      <item>cztery</item>
-      <item>pięć</item>
-      <item>sześć</item>
-      <item>siedem</item>
-      <item>osiem</item>
-      <item>dziewięć</item>
-    </one-of>
-  </rule>
   <rule id="quit">
     <one-of>
-      <item>Wyjdź</item>
-      <item>Zakończ</item>
-      <item>Zamknij</item>
+      <item>Wyloguj</item>
     </one-of>
   </rule>
 </grammar>

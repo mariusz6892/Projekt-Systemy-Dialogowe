@@ -47,9 +47,9 @@ namespace Obsługa_Taxi.Helpers
             {
                 speechRecognitionEngine.RecognizeAsync(RecognizeMode.Multiple);
             }
-            catch (InvalidOperationException)
+            catch (InvalidOperationException ex)
             {
- 
+                Console.Out.WriteLine(ex.ToString());
             }
             catch (NullReferenceException)
             {
@@ -68,12 +68,14 @@ namespace Obsługa_Taxi.Helpers
             SrgsDocument srgsDocument = new SrgsDocument("./Assets/" + GetType().Name + ".srgs");
 
             AddCustomSpeechGrammarRules(srgsDocument.Rules);
-
-            return new Grammar(srgsDocument);
+            Grammar grammar = new Grammar(srgsDocument);
+            return grammar;
         }
 
         public virtual void InitializeSpeech(object sender, DoWorkEventArgs e)
         {
+            
+
             InitializeSpeechSynthesis();
 
             InitializeSpeechRecognition();
@@ -100,15 +102,10 @@ namespace Obsługa_Taxi.Helpers
             speechRecognitionEngine.LoadGrammarAsync(grammar);
         }
 
-        protected void LoadGrammarSync(Grammar grammar)
-        {
-            speechRecognitionEngine.LoadGrammar(grammar);
-        }
-
         protected void ReloadGrammars()
         {
             speechRecognitionEngine.UnloadAllGrammars();
-
+            
             LoadGrammarAsync(GetSpeechGrammar());
         }
 

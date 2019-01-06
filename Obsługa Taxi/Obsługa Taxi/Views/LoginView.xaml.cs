@@ -1,5 +1,6 @@
 ﻿using Microsoft.Speech.Recognition;
 using Obsługa_Taxi.Helpers;
+using Obsługa_Taxi.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +10,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -88,7 +90,8 @@ namespace Obsługa_Taxi.Views
             PopupRegister.IsOpen = false;
             NumberTextBox.Text = "";
             NumberTextBoxReg.Text = "";
-        }
+            StopSpeechRecognition();
+;        }
 
         private void RegisterPopup_Click(object sender, RoutedEventArgs e)
         {
@@ -96,6 +99,7 @@ namespace Obsługa_Taxi.Views
             PopupRegister.IsOpen = false;
             NumberTextBox.Text = "";
             NumberTextBoxReg.Text = "";
+            StopSpeechRecognition();
         }
 
         public override void InitializeSpeech(object sender, DoWorkEventArgs e)
@@ -116,11 +120,11 @@ namespace Obsługa_Taxi.Views
 
         private void SpeakHelp()
         {
-            Speak("Aby zalogować się powiedz LOGOWANIE, po czym po komendzie powiedz numer telefonu i ponownie powiedz LOGOWANIE");
-            Speak("Aby zalogować się powiedz REJESTRACJA, po czym po komendzie powiedz numer telefonu i ponownie powiedz REJESTRACJA");
+            Speak("Aby zalogować się powiedz LOGOWANIE, po czym po komendzie wpisz numer telefonu i ponownie powiedz LOGOWANIE");
+            Speak("Aby zalogować się powiedz REJESTRACJA, po czym po komendzie wpisz numer telefonu i ponownie powiedz REJESTRACJA");
         }
 
-       /* protected override void SpeechRecognitionEngine_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
+       protected override void SpeechRecognitionEngine_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
             base.SpeechRecognitionEngine_SpeechRecognized(sender, e);
             RecognitionResult result = e.Result;
@@ -137,62 +141,48 @@ namespace Obsługa_Taxi.Views
                     switch (command.First())
                     {
                         case "login":
-                            Speak("Podaj numer telefonu!");
-                            PopupLogin.IsOpen = true;
-                            PopupRegister.IsOpen = false;
+                            if (PopupLogin.IsOpen == false)
+                            {
+                                Speak("Podaj numer telefonu!");
+                                LogIn.RaiseEvent(new RoutedEventArgs(ButtonBase.ClickEvent));
+                            }
+                            else
+                            {
+                                if (NumberTextBox.Text.Length == NumberTextBox.MaxLength)
+                                {
+                                    LogowaniePopup.Focus();
+                                    LogowaniePopup.Command?.Execute(null);
+                                    LogowaniePopup.RaiseEvent(new RoutedEventArgs(ButtonBase.ClickEvent));
+                                }
+                                else Speak("Wpisz poprawny numer telefonu");
+                            }
+                            break;
+                        case "register":
+                            if (PopupRegister.IsOpen == false)
+                            {
+                                Speak("Podaj numer telefonu!");
+                                Register.RaiseEvent(new RoutedEventArgs(ButtonBase.ClickEvent));
+                            }
+                            else
+                            {
+                                if (NumberTextBoxReg.Text.Length == NumberTextBoxReg.MaxLength)
+                                {
+                                    RegisterPopup.Focus();
+                                    RegisterPopup.Command?.Execute(null);
+                                    RegisterPopup.RaiseEvent(new RoutedEventArgs(ButtonBase.ClickEvent));    
+                                }
+                                else Speak("Wpisz poprawny numer telefonu");
+                            }
                             break;
                         case "help":
                             SpeakHelp();
                             break;
-                        case "register":
-                            Speak("Podaj numer telefonu!");
-                            PopupLogin.IsOpen = false;
-                            PopupRegister.IsOpen = true;
-                            break;
-                        case "number":
-                            switch (command.Skip(1).First())
-                            {
-                                case "zero":
-                                    NumberTextBox.Text = NumberTextBox.Text + "0";
-                                    break;
-                                case "jeden":
-                                    NumberTextBox.Text = NumberTextBox.Text + "1";
-                                    break;
-                                case "dwa":
-                                    NumberTextBox.Text = NumberTextBox.Text + "2";
-                                    break;
-                                case "trzy":
-                                    NumberTextBox.Text = NumberTextBox.Text + "3";
-                                    break;
-                                case "cztery":
-                                    NumberTextBox.Text = NumberTextBox.Text + "4";
-                                    break;
-                                case "pięć":
-                                    NumberTextBox.Text = NumberTextBox.Text + "5";
-                                    break;
-                                case "sześć":
-                                    NumberTextBox.Text = NumberTextBox.Text + "6";
-                                    break;
-                                case "siedem":
-                                    NumberTextBox.Text = NumberTextBox.Text + "7";
-                                    break;
-                                case "osiem":
-                                    NumberTextBox.Text = NumberTextBox.Text + "8";
-                                    break;
-                                case "dziewięć":
-                                    NumberTextBox.Text = NumberTextBox.Text + "9";
-                                    break;
-                            }
-                            break;
                         case "quit":
-                            PopupLogin.IsOpen = false;
-                            PopupRegister.IsOpen = false;
-                            NumberTextBox.Text = "";
-                            NumberTextBoxReg.Text = "";
+                            ZamknijPopup.RaiseEvent(new RoutedEventArgs(ButtonBase.ClickEvent));
                             break;
                     }
                 });
             }
-        }*/
+        }
     }
 }
